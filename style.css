@@ -20,14 +20,16 @@ h1{
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     border: 2px solid black;
-    height: 400px;
+    height: 550px;
     width: 600px;
     margin: 20px  auto;
-    background-color: #ffb447;    
+    background-color:#e2d8ca ;
+
 }
 .memory{
     border: 2px solid black;
     text-align: center;
+   
     
 }
 .hard{
