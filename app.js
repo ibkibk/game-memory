@@ -31,20 +31,22 @@ for (let i = 0; i < shuffledImages.length; i++) {
 
 const checkImages = () => {
     if (checklist[0].firstChild.src !== checklist[1].firstChild.src) {
-        setTimeout(()=>{
+        setTimeout(() => {
             checklist[0].firstChild.style.visibility = "hidden";
             checklist[1].firstChild.style.visibility = "hidden";
             empty();
-        },500);
-    }else{
+        }, 500);
+    } else {
         empty();
-   } 
+    }
 }
+
 let parent = $(".container");
 let divs = parent.children();
 while (divs.length) {
     parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
 }
+
 $('.front').css("visibility", "hidden");
 $(".memory").click((event) => {
     $(event.target).children().first().css("visibility", "visible");
@@ -55,17 +57,18 @@ $(".memory").click((event) => {
         checkImages();
     }
 })
-const empty = ()=>{
+
+const empty = () => {
     return checklist.length = 0;
 }
 
-    $(".one").click(function(){
-        Swal.fire("Memory game is a well known game. there are several field with picures which all arent" + 
-        " visible at the begining.there are always fields with same picures on it when you click on the fields " + 
-        "with the same picure on it one after the another then the picure stay visible otherwise only the last selected "+
+$(".one").click(function () {
+    Swal.fire("Memory game is a well known game. there are several field with picures which all arent" +
+        " visible at the begining.there are always fields with same picures on it when you click on the fields " +
+        "with the same picure on it one after the another then the picure stay visible otherwise only the last selected " +
         " picure stay visible.the game is solved when all pics are visible.\nGood luck");
-    })
-     
+})
+
 
 
 
