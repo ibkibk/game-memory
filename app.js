@@ -36,19 +36,10 @@ const checkImages = () => {
             checklist[1].firstChild.style.visibility = "hidden";
             empty();
         },500);
-        
-        
     }else{
         empty();
-   
-} 
-
+   } 
 }
-
-
-
-
-
 let parent = $(".container");
 let divs = parent.children();
 while (divs.length) {
@@ -67,15 +58,15 @@ $(".memory").click((event) => {
 const empty = ()=>{
     return checklist.length = 0;
 }
-$(function(){
+
     $(".one").click(function(){
-        alert("Memory game is a well known game. there are several field with picures which all arent" + 
+        Swal.fire("Memory game is a well known game. there are several field with picures which all arent" + 
         " visible at the begining.there are always fields with same picures on it when you click on the fields " + 
         "with the same picure on it one after the another then the picure stay visible otherwise only the last selected "+
         " picure stay visible.the game is solved when all pics are visible.\nGood luck");
     })
      
-});
+
 
 
 
