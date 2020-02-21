@@ -23,15 +23,21 @@ h1{
     height: 550px;
     width: 600px;
     margin: 20px  auto;
-    background-color:#e2d8ca ;
+    background-color:blue ;
 
 }
 .memory{
     border: 2px solid black;
     text-align: center;
-    background-size:auto ;
+   
    
     
+}
+.front{
+    width: 80px;
+    object-fit: fill;
+    text-align: center;
+   
 }
 .hard{
    
