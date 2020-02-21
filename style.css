@@ -20,7 +20,7 @@ h1{
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     border: 2px solid black;
-    height: 600px;
+    height: 480px;
     width: 600px;
     margin: 20px  auto;
     background-color:blue ;
@@ -35,6 +35,7 @@ h1{
 }
 .front{
     width: 100px;
+    height: 100px;
     justify-items: center;
    
 }
