@@ -29,6 +29,7 @@ h1{
 .memory{
     border: 2px solid black;
     text-align: center;
+    background-size:auto ;
    
     
 }
@@ -66,4 +67,5 @@ p{
     font-weight: bold;
     font-family: sans-serif;
 }
+
 
