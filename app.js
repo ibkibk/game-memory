@@ -107,7 +107,7 @@ const empty = () => {
 $(".one").click(function () {
     Swal.fire("Memory game is a well known game. there are several field with picures which all arent" +
         " visible at the begining.there are always fields with same picures on it when you click on the fields " +
-        "with the same picure on it one after the another then the picure stay visible otherwise only the last selected " +
+        " with the same picure on it one after the another then the picure stay visible otherwise only the last selected " +
         " picure stay visible.the game is solved when all pics are visible.\nGood luck");
 })
 
