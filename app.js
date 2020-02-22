@@ -14,11 +14,24 @@ const shuffle = (array) => {
 
 
 
+
 let checklist = [];
 const boxes = document.querySelectorAll('.memory');
 let images = ['award', 'happy', 'music', 'angular', 'react', 'running', 'fist', 'hand'];
 const doubleImages = images.concat(images);
 const shuffledImages = shuffle(doubleImages);
+// function compare(images,doubleImages){
+//     const checklist =[];
+//     images.forEach((e1)=>doubleImages.forEach((e2)=>
+//      {if(e1 === e2){
+//          checklist.push(e1)
+//      }
+//      } 
+//     ));
+//     console.log("checklist[]");
+//     return checklist;
+    
+// }
 
 
 
@@ -30,7 +43,7 @@ function startTimer(){
     min = parseInt(timer/5);
     sec = parseInt(timer%5);
     if(timer < 0){
-        alert("TIME IS UP");
+        // alert("TIME IS UP");
          return;
     };
     
@@ -42,6 +55,7 @@ function startTimer(){
       
     },1000);
 }
+
 
 // Loop through the shuffled images array
 // add a tag like this to each .memory div
@@ -63,11 +77,6 @@ const checkImages = () => {
         empty();
     }
 } 
-// checklist[0]++;
-// if( checklist[0] === 8){
-//     alert("well done");
-
-// }
 
 
 let parent = $(".container");
