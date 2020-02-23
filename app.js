@@ -76,9 +76,8 @@ const checkImages = () => {
         empty();
     }
 } 
-if (boxes[images] === 16){
-    alert("well done");
-}
+
+
 // function disable(){
 //     Array.prototype.filter.call(images, function(boxes){
 //         boxes.classList.add('disabled');
@@ -100,6 +99,7 @@ $(".memory").click((event) => {
     }
     if (checklist.length == 2) {
         checkImages();
+    
     }
 })
 
@@ -107,6 +107,7 @@ $(".memory").click((event) => {
 const empty = () => {
     return checklist.length = 0;
 }
+
 // $(".two").$(function(){
 //     location.reload(true);
 // })
