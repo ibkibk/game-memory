@@ -30,7 +30,7 @@ let startTimer = () => {
          return;
     };
     
-    document.getElementById("time").innerHTML="<b>time Left</b>" + " " +  min.toString() + " : " +sec.toString();
+    document.getElementById("time").innerHTML="<b>Time</b>" + " " +  min.toString() + " : " +sec.toString();
     timer--;
 
     setTimeout(function(){
