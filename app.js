@@ -20,21 +20,14 @@ const boxes = document.querySelectorAll('.memory');
 let images = ['award', 'happy', 'music', 'angular', 'react', 'running', 'fist', 'hand'];
 const doubleImages = images.concat(images);
 const shuffledImages = shuffle(doubleImages);
-// function compare(images,doubleImages){
-//     const checklist =[];
-//     images.forEach((e1)=>doubleImages.forEach((e2)=>
-//      {if(e1 === e2){
-//          checklist.push(e1)
-//      }
-//      } 
-//     ));
-//     console.log("checklist[]");
-//     return checklist;
-    
+
+
+// let win = ()=>{
+//     if(checklist.length == 16){
+//         alert("well done")
+//         // return checklist.timer.stop();
+//     }
 // }
-
-
-
 let timer =60;
 let min =0;
 let sec =0;
@@ -60,9 +53,7 @@ let startTimer = () => {
         document.getElementById("time").innerHTML = "GAME OVER";
       }
 }
-let gameWin = ()=>{
-    checklist.timer.stop();
-}
+
 
 
 // Loop through the shuffled images array
@@ -73,7 +64,7 @@ for (let i = 0; i < shuffledImages.length; i++) {
     const imageName = shuffledImages[i];
     boxes[i].innerHTML = `<img src="images/${imageName}.png" class="front"/>`;
 }
-
+// let  matchedImages = images === doubleImages;
 const checkImages = () => {
     if (checklist[0].firstChild.src !== checklist[1].firstChild.src) {
         setTimeout(() => {
@@ -85,6 +76,14 @@ const checkImages = () => {
         empty();
     }
 } 
+if (boxes[images] === 16){
+    alert("well done");
+}
+// function disable(){
+//     Array.prototype.filter.call(images, function(boxes){
+//         boxes.classList.add('disabled');
+//     });
+// }
 
 
 let parent = $(".container");
