@@ -35,13 +35,13 @@ const shuffledImages = shuffle(doubleImages);
 
 
 
-let timer =5;
+let timer =60;
 let min =0;
 let sec =0;
 
-function startTimer(){
-    min = parseInt(timer/5);
-    sec = parseInt(timer%5);
+let startTimer = () => {
+    min = parseInt(timer/60);
+    sec = parseInt(timer%60);
     if(timer < 0){
         // alert("TIME IS UP");
          return;
@@ -49,11 +49,19 @@ function startTimer(){
     
     document.getElementById("time").innerHTML="<b>time Left</b>" + " " +  min.toString() + " : " +sec.toString();
     timer--;
+
     
     setTimeout(function(){
        startTimer();
       
     },1000);
+    if (timer < 0) {
+        clearInterval(startTimer);
+        document.getElementById("time").innerHTML = "GAME OVER";
+      }
+}
+let gameWin = ()=>{
+    checklist.timer.stop();
 }
 
 
