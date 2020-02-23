@@ -12,22 +12,12 @@ const shuffle = (array) => {
     return copy;
 }
 
-
-
-
 let checklist = [];
 const boxes = document.querySelectorAll('.memory');
 let images = ['award', 'happy', 'music', 'angular', 'react', 'running', 'fist', 'hand'];
 const doubleImages = images.concat(images);
 const shuffledImages = shuffle(doubleImages);
 
-
-// let win = ()=>{
-//     if(checklist.length == 16){
-//         alert("well done")
-//         // return checklist.timer.stop();
-//     }
-// }
 let timer =60;
 let min =0;
 let sec =0;
@@ -43,7 +33,6 @@ let startTimer = () => {
     document.getElementById("time").innerHTML="<b>time Left</b>" + " " +  min.toString() + " : " +sec.toString();
     timer--;
 
-    
     setTimeout(function(){
        startTimer();
       
@@ -53,12 +42,6 @@ let startTimer = () => {
         document.getElementById("time").innerHTML = "GAME OVER";
       }
 }
-
-
-
-// Loop through the shuffled images array
-// add a tag like this to each .memory div
-// `<img src="${imageName}.png" class="front"/>`
 
 for (let i = 0; i < shuffledImages.length; i++) {
     const imageName = shuffledImages[i];
@@ -74,9 +57,10 @@ const checkImages = () => {
         }, 500);
     } else {
         empty();
+    }if (checklist.length == images) {
+        console.log("ucdscd");
     }
 } 
-
 
 // function disable(){
 //     Array.prototype.filter.call(images, function(boxes){
@@ -107,10 +91,6 @@ $(".memory").click((event) => {
 const empty = () => {
     return checklist.length = 0;
 }
-
-// $(".two").$(function(){
-//     location.reload(true);
-// })
 
 $(".one").click(function () {
     Swal.fire("Memory game is a well known game. there are several field with picures which all arent" +
